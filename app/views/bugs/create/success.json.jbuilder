@@ -1,0 +1,1 @@
+json.number @bug.number

@@ -1,0 +1,1 @@
+json.error I18n.t('bug_number_not_found')

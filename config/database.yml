@@ -1,0 +1,29 @@
+production: &production
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: instabug_challenge
+  pool: 5
+  username: root
+  password: mahmoud33
+  socket: /var/run/mysqld/mysqld.sock
+  # socket: /tmp/mysql.sock
+
+pre-production:
+  <<: *production
+
+development:
+  <<: *production
+
+test:
+  <<: *production
+
+# test:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: instabug_challenge_test
+#   pool: 5
+#   username: root
+#   password: mahmoud33
+#   socket: /var/run/mysqld/mysqld.sock
