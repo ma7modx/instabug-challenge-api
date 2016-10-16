@@ -25,6 +25,7 @@ class Bug < ActiveRecord::Base
   # There're two cache stores for the case of rolling back
   def self.next_bug_number(application_token)
     number_cache_key = "bug_number:#{application_token}"
+    # I should've fetch the record then increment it, this code may counter a problem in the else part
     if Rails.cache.exist?(number_cache_key, raw: true)
       Rails.cache.increment(number_cache_key)
     else
